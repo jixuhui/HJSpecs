@@ -20,11 +20,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/jixuhui/HJArchitecture.git", :tag => "0.1.0" }
 
-  s.resource_bundles = {
-    'HJArchitecture' => ['resources/*.png']
-  }
-
   s.requires_arc = true
+  
+  s.source_files = 'HJArchitecture','*.{h}'
 
   s.subspec 'common' do |cm|
   cm.source_files = 'HJArchitecture','common/**/*.{h,m}'
@@ -56,5 +54,9 @@ Pod::Spec.new do |s|
   end
 
   s.frameworks = 'UIKit'
+  
+  s.resource_bundles = {
+    'HJArchitecture' => ['resources/*.png']
+  }
 
 end
